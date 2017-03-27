@@ -1,0 +1,17 @@
+{
+  "name": "issue-tracker-report",
+  "version": "1.0.0",
+  "description": "print number of issues to track",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "moment": "^2.18.1",
+    "moment-range": "^3.0.3",
+    "node-trello": "^1.1.2"
+  }
+}
