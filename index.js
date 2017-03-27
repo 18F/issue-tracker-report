@@ -1,4 +1,5 @@
 const Trello = require("node-trello");
+const argv = require('minimist')(process.argv.slice(2));
 require('dotenv').config();
 const env = process.env;
 
@@ -9,11 +10,14 @@ const moment = MomentRange.extendMoment(Moment);
 
 const trello = new Trello(env.TRELLO_API_KEY, env.TRELLO_API_TOK);
 
+const begininngOfWeek= argv._[0];
+const endOfWeek= argv._[1];
+
 
 const boardID = env.BOARD_ID;
 
-const startDate = moment('2017-03-20')
-, endDate   = moment('2017-03-24')
+const startDate = moment(begininngOfWeek)
+, endDate   = moment(endOfWeek)
 , weekRange = moment().range(startDate, endDate);
 
 console.log("Issue Tracker Weekly Update:");
