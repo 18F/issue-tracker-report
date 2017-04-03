@@ -20,7 +20,8 @@ const startDate = moment(begininngOfWeek)
 , endDate   = moment(endOfWeek)
 , weekRange = moment().range(startDate, endDate);
 
-console.log("Issue Tracker Weekly Update:");
+console.log("*Issue Tracker Weekly Update:*");
+console.log(env.TRELLO_LINK);
 
 // URL arguments are passed in as an object.
 trello.get(`/1/boards/${boardID}/cards`, { actions: ['createCard', 'updateCard'] }, function(err, data) {
